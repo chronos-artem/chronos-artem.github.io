@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft YaHei", sans-serif; }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #2d3436;
+            color: white;
+        }
+
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { color: #dfe6e9; text-decoration: none; }
+
+        .hero {
+            height: 80vh; /* 稍微调高一点，为了放下照片 */
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* 这是新加的头像样式 */
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.3);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: white;
+            color: #6c5ce7;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover { transform: scale(1.1); }
+
+        /* 6. 技能区样式 */
+        .skills-section {
+            padding: 60px 10%;
+            background-color: #f9f9f9; /* 给背景一个浅灰色，和上面区分开 */
+            text-align: center;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+            color: #2d3436;
+            font-size: 2rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* 卡片之间的间距 */
+            flex-wrap: wrap; /* 如果屏幕太窄，卡片会自动换行 */
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px; /* 圆角 */
+            width: 250px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* 淡淡的阴影，增加高级感 */
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px); /* 鼠标移上去，卡片会向上漂浮一点 */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .skill-card h3 {
+            color: #6c5ce7;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #636e72;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">我的主页</div>
+        <ul class="nav-links">
+            <li><a href="#">关于</a></li>
+            <li><a href="#">技能</a></li>
+            <li><a href="#">联系</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <img src="me.jpg" alt="我的头像" class="profile-img">
+        
+        <h1>你好，我是 <span style="color: #ffeaa7;">一只酷酷的隼</span></h1>
+        <p>这是我亲手制作的第一个网页，照片已经在上面了！</p>
+        <button class="btn">点赞支持</button>
+    </header>
+    <section class="skills-section">
+        <h2 class="section-title">我的技能栈</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <p>网页的骨架，我已经入门啦！</p>
+            </div>
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <p>网页的衣服，正在努力装修中。</p>
+            </div>
+            <div class="skill-card">
+                <h3>好奇心</h3>
+                <p>探索新技术的动力来源。</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
